@@ -87,7 +87,7 @@ const getSingleFoodController = async (req, res) => {
         message: "please provide id",
       });
     }
-    const food = await foodModal.findById(foodId);
+    const food = await foodModal.findOne({ _id: foodId });
     if (!food) {
       return res.status(404).send({
         success: false,

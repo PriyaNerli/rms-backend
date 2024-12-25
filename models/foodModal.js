@@ -67,7 +67,11 @@ const foodSchema = new mongoose.Schema({
   isAvailabe: { type: Boolean, default: true },
   restaurant: { type: mongoose.Schema.Types.ObjectId, ref: "Restaurant" },
   rating: { type: Number, default: 0 },
-  foodType: { type: String, enum: ["veg", "non-veg"], required: true },
+  foodType: {
+    type: String,
+    enum: ["veg", "non-veg", "starter", "mocktail", "desert"],
+    required: true,
+  },
 });
 
 // Create and export the model
