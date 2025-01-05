@@ -24,6 +24,7 @@ app.use("/api/v1/user", require("./routes/userRoutes"));
 app.use("/api/v1/resturant", require("./routes/resturantRoutes"));
 app.use("/api/v1/category", require("./routes/catgeoryRoutes"));
 app.use("/api/v1/food", require("./routes/foodRoutes"));
+app.use("/api/v1/bookings", require("./routes/bookingRoutes"));
 
 //main route URL http://localhost:8080
 app.get("/", (req, res) => {
@@ -31,7 +32,7 @@ app.get("/", (req, res) => {
     .status(200)
     .send("<h1>Welcome to Food Server APP API BASE PROJECT </h1>");
 });
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 1010;
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}..!`.white.bgMagenta);
